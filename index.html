@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    </head>
+    <body>
+        
+
+
+
+        <a-scene>
+            <a-assets>
+      <audio id="soundEffect1" src="sound1.mp3" preload="auto"></audio>
+ </a-assets>
+
+            
+            <a-camera>
+                <a-cursor></a-cursor>
+            </a-camera>
+        <a-sphere
+        sound="src: #soundEffect1; on: click; volume: 1;"
+            position="0 1 -5"
+            radius="1"
+            height="1"
+            animation="
+                property: position;
+                from: -1 1 -4;
+                to: 2 0 -4;
+                dur: 2000;
+                easing: linear;
+                loop: true;
+                dir: alternate;
+            "
+            color="yellow">
+        </a-sphere>
+        </a-scene>
+    </body>
+</html>
